@@ -432,7 +432,7 @@ def doCheck() {
                         lastTime = lastTime.date.time
                         def hours = (((rightNow.time - lastTime) / 60000) / 60)
                         def xhours = (hours.toFloat() / 1).round(2)
-                        if (xhours > timer) {
+                        if (timer && xhours > timer) {
                             //def thours = (hours.toFloat()/1).round(0)
                             delaylistMap += [
                                 [time: "$xhours", name: "$it.displayName", id: "$it.id"]
